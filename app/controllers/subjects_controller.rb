@@ -40,7 +40,7 @@ class SubjectsController < ApplicationController
     #Update the object
     if @subject.update_attributes(subject_params) 
     flash[:notice] = "Subject updated succesfully."
-      #If the supdate succeeds, reditect to the index action
+      #If the update succeeds, reditect to the index action
       redirect_to(:action => 'show', :id => @subject.id)
     else
       #If the update fails, redisplay the form so the user can fix problems

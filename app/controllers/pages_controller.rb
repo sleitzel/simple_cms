@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
+
+  layout false
   
   def index
-    @page = Page.sorted
+    @pages = Page.sorted
   end
 
   def show
@@ -56,7 +58,7 @@ class PagesController < ApplicationController
     # same as using "params[:subject]", except that it:
     # - raises an error if :subject is not present
     # - allows listed attributes to be mass-assigned
-    params.require(:subject).permit(:name, :position, :visible)
+    params.require(:subject).permit(:subject_id, :name, :permalink, :position, :visible)
   end
 
 

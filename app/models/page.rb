@@ -8,4 +8,5 @@ class Page < ActiveRecord::Base
 	scope :invisible, lambda { where(:visible => false) }
 	scope :sorted, lambda { order("pages.position ASC")}
 	scope :newest_first, lambda { order("pages.position DESC")}
+	
 end

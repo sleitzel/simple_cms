@@ -14,7 +14,6 @@
 			<th>&nbsp;</th>
 			<th>Subject</th>
 			<th>Visible</th>
-			<th>Pages</th>
 			<th>Actions</th>
 		</tr>
 
@@ -23,7 +22,6 @@
 			<td><%= subject.position %></td>
 			<td><%= subject.name %></td>
 			<td class="center"><%= subject.visible ? 'yes' : 'no' %></td>
-			<td class="center"><%= subject.pages.size %></td>
 			<td class="actions">
 				<%= link_to("Show", {:action => 'show', :id => subject.id}, :class => 'action show') %>
 				<%= link_to("Edit", {:action => 'edit', :id => subject.id}, :class => 'action edit') %>
